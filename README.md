@@ -26,6 +26,7 @@ Clone este repositório:
 
     git clone https://github.com/Pasch0/WSO2RCE.git
     cd WSO2RCE
+    pip install rich
 
 
 
