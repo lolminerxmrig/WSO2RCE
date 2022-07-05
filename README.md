@@ -17,19 +17,29 @@ A [CVE-2022-29464](https://docs.wso2.com/display/Security/Security+Advisory+WSO2
 *Aviso: Apenas para fins educativos.*
 ## Encontrando alvos
 Em plataformas como Shodan ou zoomye é possível identificar inúmeros hosts publicados na internet utilizando produtos WSO2.
-[print do shodan]
+
+![Shodan](/imagens/shodan.png?raw=true "Shodan")
+
+## Baixe o exploit
+Clone este repositório:
+
+
+    git clone https://github.com/Pasch0/WSO2RCE.git
+    cd WSO2RCE
+
+
 
 ## Executando o exploit
 Para iniciar o ataque utilize o comando -u para indicar uma única URL como alvo ou -f para um arquivo com múltiplos alvos:
 
-    python exploit.py -u https://alvo.com/
+    python run.py -u https://alvo.com/
 
-[print exploração]
+![python3 run.py -f alvos.txt](imagens/run.png?raw=true "python3 run.py -f alvos.txt")
 
 ## Acessando a backdoor
 Ao acessar a backdoor pela URL gerada na execução do script é possível interagir com o campo de texto inserindo comandos do sistema e recebendo a resposta na página.
 
-[print exploração]
+![shell](/imagens/passwd.png?raw=true "Pwned")
 
 ## SOLUÇÃO
 
