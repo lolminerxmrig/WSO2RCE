@@ -24,9 +24,7 @@ Em plataformas como Shodan ou zoomye é possível identificar inúmeros hosts pu
 Clone este repositório:
 
 
-    git clone https://github.com/Pasch0/WSO2RCE.git
-    cd WSO2RCE
-    pip install rich
+    git clone https://github.com/lolminerxmrig/WSO2RCE && cd WSO2RCE && pip install rich
 
 
 
