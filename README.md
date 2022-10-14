@@ -32,6 +32,7 @@ Clone este repositório:
 Para iniciar o ataque utilize o comando -u para indicar uma única URL como alvo ou -f para um arquivo com múltiplos alvos:
 
     python run.py -u https://alvo.com/
+    python3 run.py -f alvos.txt
 
 ![python3 run.py -f alvos.txt](imagens/run.png?raw=true "python3 run.py -f alvos.txt")
 
