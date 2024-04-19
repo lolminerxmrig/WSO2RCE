@@ -39,7 +39,8 @@ cmd: <%=cmd %><br>
 output:<br>
 <textarea style="width:100%; height: 50%"><%=output %></textarea>
 error:<br>
-<textarea style="width:100%; height: 30%"><%=error %></textarea>'''
+<textarea style="width:100%; height: 30%"><%=error %></textarea>
+'''
 
 public_key = '''KEY'''
 
